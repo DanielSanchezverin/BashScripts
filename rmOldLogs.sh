@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Directory where the old logs will be removed
 pth="/var/log/apache2"
 # Command to calculate the number of files
 n=$(ls $pth | wc -l)
