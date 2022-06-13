@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pth="$/var/log/apache2"
+pth="/var/log/apache2"
 # Command to calculate the number of files
 n=$(ls $pth | wc -l)
 # If $n is greater than 15, the if is executed
@@ -16,6 +16,6 @@ then
                 # awk '{ print $9 }' extracts the name of the file and stores it in the variable old
                 old=$(ls -lt $pth | tail -1 | awk '{ print $9 }')
                 # We delete the oldest file
-                rm $old
+                rm $pth/$old
         done
 fi
